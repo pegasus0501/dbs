@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        position: relative;
+        background: url(https://image.shutterstock.com/image-photo/university-graduation-ceremonies-on-commencement-260nw-298297466.jpg)
+          no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+      body:after {
+        position: fixed;
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(7, 7, 7, 0.5);
+        z-index: -1;
+      }
+      .button {
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+
+      .button1 {
+        background-color: #db0d0d;
+      }
+      .button2 {
+        background-color: #141414;
+      }
+
+      div {
+        margin: 10px 0px;
+      }
+      table,
+      th,
+      td {
+        background-color: #db0d0d;
+        border: 1px solid black;
+      }
+      td {
+        margin: 10px;
+      }
+      label {
+        color: blue;
+      }
+      .execution {
+        display: flex;
+      }
+      /* .main {
+      } */
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Book Order System</title>
+  </head>
+  <body>
+    <div class="main">
+      <h2 style="color: red"><center>Admin Screen-1</center></h2>
+      <div class="open-close-btn">
+        <button class="button button1">open market</button>
+        <button class="button button2">close market</button></br></br>
+
+      </div>
+
+
+      <select id="host">
+        <option value="Select Stocks">Select Stocks</option>
+        <option value="dbs">DBS</option>
+        <option value="infosys">Infosys</option>
+        <option value="tcs">tcs</option>
+      </select>
+      <input type="text" id="fdate" name="fromdate" />
+      <input type="text" id="tdate" name="todate" />
+      <button>show orders</button>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h2 style="color: blue">List Products</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <table
+              id="productTable"
+              class="table table-bordered table-condensed table-striped"
+            >
+              <thead>
+                <tr>
+                  <th>S.NO</th>
+                  <th>Stock Name</th>
+                  <th>Order Qty</th>
+                  <th>Order Type</th>
+                  <th>Executed Qty</th>
+                  <th>Price</th>
+                  <th>Order Status</th>
+                  <th>Order Date</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="execution">
+        <table>
+          <tr>
+            <h2><label>Execution qty</label></h2>
+            <input type="text" id="eq" name="eq" />
+            &nbsp;&nbsp; &nbsp;&nbsp;
+            <h2><label>Execution price</label></h2>
+            <input type="text" id="ep" name="eq" />
+          </tr>
+        </table>
+      </div>
+
+      <div>
+        <button class="button" style="background-color: blue">
+          execute orders
+        </button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
